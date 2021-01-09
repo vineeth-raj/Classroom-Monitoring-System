@@ -37,4 +37,6 @@ The main objectives of this system are:
 
 ## Block Diagram of how our system works
 
-![Screenshot]()
+![Screenshot](https://github.com/vineeth-raj/Classroom-Monitoring-System/blob/main/BlockDiagram-Classroom.png)
+
+## Description
