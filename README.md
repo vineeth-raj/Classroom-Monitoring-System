@@ -17,3 +17,20 @@ The main objectives of this system are:
 - Make the attendance system flexible (biometric)
 - Make the teachers and principal understand the interest of students on  the lectures by identifying their emotions and sitting postures.
 - Automatic Notes taker.
+
+## Components Required
+
+### For Biometric Attendance:
+- Arduino UNO Board(Atmega 328p Microcontroller)
+- Fingerprint Sensor(R307 Module)
+- LCD Display(16x2 LCD Module)
+- Firebase(database to store students roll number)
+
+### For Emotion and Posture Recognition
+- Raspberry Pi
+- Camera Module
+- DeepLearning modules and models
+
+### For Automatic Notes Taker
+- Raspberry Pi4
+- ReSpeaker USB MicArray
