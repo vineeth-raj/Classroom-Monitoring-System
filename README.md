@@ -34,3 +34,7 @@ The main objectives of this system are:
 ### For Automatic Notes Taker
 - Raspberry Pi4
 - ReSpeaker USB MicArray
+
+## Block Diagram of how our system works
+
+![Screenshot]()
