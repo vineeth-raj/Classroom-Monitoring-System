@@ -58,3 +58,33 @@ Besides a bounding box, BlazeFace also predicts 6 keypoints for face landmarks (
 ![](https://www.pyimagesearch.com/wp-content/uploads/2017/03/imagenet_vgg16.png)
 
 ![](https://www.researchgate.net/profile/Clifford_Yang/publication/325137356/figure/fig2/AS:670371271413777@1536840374533/llustration-of-the-network-architecture-of-VGG-19-model-conv-means-convolution-FC-means.jpg)
+
+### Pose Estimation
+Here we adapt multi-person pose estimation architecture to use it on edge devices.We follow the bottom-up approach from OpenPose because of its decent quality and robustness tonumber of people inside the frame. The networkmodel has4.1M parameters and 9 billions floating-point operations (GFLOPs) complexity,which is just∼15% of the baseline 2-stage OpenPose with almost the same quality. It detects a skeleton (which consists of keypoints and connections between them) to identify human poses for every person inside the image. The pose may contain up to 18 keypoints: ears, eyes, nose, neck, shoulders, elbows, wrists, hips, knees, and ankles.
+
+![ScreenShot](https://github.com/vineeth-raj/Classroom-Monitoring-System/blob/main/Pose-Detection.png)
+
+We profiled the code and removed extra memory allocations, parallelized keypoints extraction withOpenCV’s routine. This made code significantly faster, and the last bottleneck was the resize featuremaps to the input image size.We decided to skip the resize step and performed grouping directly on network output, but accuracydropped significantly. Thus step with upsampling feature maps cannot be avoided, but it is notnecessary to do it to input image size. Our experiments shown, that with upsample factor 8 theaccuracy is the same, as if resize to input image size. We usedupsample factor 4 for the demopurposes.
+(inspired from this [paper](https://arxiv.org/pdf/1811.12004.pdf))
+
+### Notes taker
+In this we have done like simple audio to text converter using pyaudio and Halo.The written text was mailed to students as a notes.
+
+## Procedure
+
+- Firstly, the professor with the biometric device logs into his account  with his finger print and gets the attendance list of the subject he  handles for.
+- Then the device is given to the students to keep their fingerprints and the attendance of that day is updated with the time of finger prints.
+- The professor is kindly advised to keep the device on till his hourends  because assoonasthe professor logs in, the notes taker device will  start running and will stop if the biometric device stops.
+- The notes taking device is connected tothecloudand will take  notes of the professor’s wordsandwillsend that to every student’s  webmail ID ormailIDonce the professor logs out from his biometric  device(session over).
+- This reduces the students effort of taking notes and make the  students listen more on the professors words.
+- The professor can log out by placing his finger-print on the device the  second time.
+- LCD display is kept on the biometric device to see the status whether the professor logged in or not and students fingerprint recognized or not.
+- Meanwhile during the class, theemotionofthe students is detected using their  facial expressions and the overall emotion of the students is displayed on the  smart-board(if available) every 3 seconds and will be sent as amessage to the  principal/the respective head and the teacher once the session ends.
+- Various poses of the students are also detected in this process such as standing, raising hand, leaning on bench which can be used to know the interest of student over the subject.
+- Considering the students privacy, we are not taking the student faces to a  server..hence we are processing the faces from the cameras inside the board using  OpenCV,blazeface-pytorch(used to detect face) and getting the emotions as output and this emotions are only going to the server and also the same for poses.
+
+## Final Touch
+
+- We were able to create a system similar to the below pic.
+
+![](https://miro.medium.com/max/875/1*TqeG3GUeIOaXY36Dwu8rkA.jpeg)
