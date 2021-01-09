@@ -75,11 +75,11 @@ In this we have done like simple audio to text converter using pyaudio and Halo.
 - Firstly, the professor with the biometric device logs into his account  with his finger print and gets the attendance list of the subject he  handles for.
 - Then the device is given to the students to keep their fingerprints and the attendance of that day is updated with the time of finger prints.
 - The professor is kindly advised to keep the device on till his hourends  because assoonasthe professor logs in, the notes taker device will  start running and will stop if the biometric device stops.
-- The notes taking device is connected tothecloudand will take  notes of the professor’s wordsandwillsend that to every student’s  webmail ID ormailIDonce the professor logs out from his biometric  device(session over).
+- The notes taking device is connected tothecloudand will take  notes of the professor’s wordsandwillsend that to every student’s  webmail ID or mail ID once the professor logs out from his biometric  device(session over).
 - This reduces the students effort of taking notes and make the  students listen more on the professors words.
 - The professor can log out by placing his finger-print on the device the  second time.
 - LCD display is kept on the biometric device to see the status whether the professor logged in or not and students fingerprint recognized or not.
-- Meanwhile during the class, theemotionofthe students is detected using their  facial expressions and the overall emotion of the students is displayed on the  smart-board(if available) every 3 seconds and will be sent as amessage to the  principal/the respective head and the teacher once the session ends.
+- Meanwhile during the class, the emotion of the students is detected using their  facial expressions and the overall emotion of the students is displayed on the  smart-board(if available) every 3 seconds and will be sent as amessage to the  principal/the respective head and the teacher once the session ends.
 - Various poses of the students are also detected in this process such as standing, raising hand, leaning on bench which can be used to know the interest of student over the subject.
 - Considering the students privacy, we are not taking the student faces to a  server..hence we are processing the faces from the cameras inside the board using  OpenCV,blazeface-pytorch(used to detect face) and getting the emotions as output and this emotions are only going to the server and also the same for poses.
 
