@@ -64,7 +64,7 @@ Here we adapt multi-person pose estimation architecture to use it on edge device
 
 ![ScreenShot](https://github.com/vineeth-raj/Classroom-Monitoring-System/blob/main/Pose-Detection.png)
 
-We profiled the code and removed extra memory allocations, parallelized keypoints extraction withOpenCV’s routine. This made code significantly faster, and the last bottleneck was the resize featuremaps to the input image size.We decided to skip the resize step and performed grouping directly on network output, but accuracydropped significantly. Thus step with upsampling feature maps cannot be avoided, but it is notnecessary to do it to input image size. Our experiments shown, that with upsample factor 8 theaccuracy is the same, as if resize to input image size. We usedupsample factor 4 for the demopurposes.
+We profiled the code and removed extra memory allocations, parallelized keypoints extraction withOpenCV’s routine. This made code significantly faster, and the last bottleneck was the resize featuremaps to the input image size.We decided to skip the resize step and performed grouping directly on network output, but accuracydropped significantly. Thus step with upsampling feature maps cannot be avoided, but it is notnecessary to do it to input image size. Our experiments shown, that with upsample factor 8 theaccuracy is the same, as if resize to input image size. We used up-sample factor 4 for the demo purposes.
 (inspired from this [paper](https://arxiv.org/pdf/1811.12004.pdf))
 
 ### Notes taker
@@ -84,7 +84,22 @@ In this we have done like simple audio to text converter using pyaudio and Halo.
 - Considering the students privacy, we are not taking the student faces to a  server..hence we are processing the faces from the cameras inside the board using  OpenCV,blazeface-pytorch(used to detect face) and getting the emotions as output and this emotions are only going to the server and also the same for poses.
 
 ## Final Touch
-
-- We were able to create a system similar to the below pic.
+We were able to create a system similar to the below pic. (inspired from this [website](https://edtechchina.medium.com/schools-using-facial-recognition-system-sparks-privacy-concerns-in-china-d4f706e5cfd0))
 
 ![](https://miro.medium.com/max/875/1*TqeG3GUeIOaXY36Dwu8rkA.jpeg)
+
+- This can also be used in any public speaking platform to assess the emotion of audience and make it available to the speaker to make him deliver the speech better
+
+## Future Scope
+
+- This can be extended to automating the distribution of  corrected answer papers through server or in-fact  correction of answer papers can be automated or  automated invigilation.
+- And also automatic on and off of lights and fans which  can used to reduce power wastage. The sweeper problem  can be solved by using the voice automated on and off.
+- We can add recording facilities in the system so that  students can view the lectures whenever they wish to  watch.
+
+## References
+
+- https://medium.com/@EdtechChina/schools-using-facial-recognition-system-sparks-privacy-concerns-in-china-d4f706e5cfd0
+- http://en.people.cn/n3/2018/0519/c90000-9461918.html
+
+## Contributors
+- [Shantosh](https://www.linkedin.com/in/shanthosh-kumar-921092174/)
