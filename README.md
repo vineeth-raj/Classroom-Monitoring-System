@@ -44,5 +44,10 @@ The main objectives of this system are:
 ### Biometric Attendance
 So we made a  fingerprint based biometric attendance system using Arduino.(inspired by [this](https://circuitdigest.com/microcontroller-projects/fingerprint-attendance-system-using-arduino-uno))
 
+![ScreenShot](https://github.com/vineeth-raj/Classroom-Monitoring-System/blob/main/finger-print-sensor.png)
 
 ### Emotion Recognition
+
+![ScreenShot](https://github.com/vineeth-raj/Classroom-Monitoring-System/blob/main/emotion-detection/images/results/Happy-Result.png)
+
+![ScreenShot](https://github.com/vineeth-raj/Classroom-Monitoring-System/blob/main/emotion-detection/images/results/Neutral-Result.png)
