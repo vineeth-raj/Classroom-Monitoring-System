@@ -51,3 +51,10 @@ So we made a  fingerprint based biometric attendance system using Arduino.(inspi
 ![ScreenShot](https://github.com/vineeth-raj/Classroom-Monitoring-System/blob/main/emotion-detection/images/results/Happy-Result.png)
 
 ![ScreenShot](https://github.com/vineeth-raj/Classroom-Monitoring-System/blob/main/emotion-detection/images/results/Neutral-Result.png)
+
+First of all we detected faces from a camera using [BlazeFace-Torch](https://www.kaggle.com/humananalog/blazeface-pytorch) which is a lightweight framework.
+Besides a bounding box, BlazeFace also predicts 6 keypoints for face landmarks (2x eyes, 2x ears, nose, mouth). Next using the face detected, we recognized the emotion of face among 7 emotions(Angry, Disgust, Fear, Happy, Sad, Surprise, Neutral) and then got the emoji for respective emotion. This recognition was done using VGG19 model which was trained on a million faces and was trained on Kaggle's GPU for 4 hours.
+
+![](https://www.pyimagesearch.com/wp-content/uploads/2017/03/imagenet_vgg16.png)
+
+![](https://www.researchgate.net/profile/Clifford_Yang/publication/325137356/figure/fig2/AS:670371271413777@1536840374533/llustration-of-the-network-architecture-of-VGG-19-model-conv-means-convolution-FC-means.jpg)
